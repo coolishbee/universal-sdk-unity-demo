@@ -1,6 +1,6 @@
 ## Build Setting
 
-![](https://github.com/jameschun7/universal-sdk-unity2020-demo/blob/main/img/plugins-move.png?raw=true)
+![](https://github.com/jameschun7/universal-sdk-unity-demo/blob/main/img/plugins-move.png?raw=true)
 
 Move the Plugins Folder from `Assets/UniversalSDK/Plugins` to `Assets/Plugins`.
 
@@ -24,3 +24,4 @@ Register the SHA-1 certificate thumbprint of each app signing key certificate an
 ![firebase-cert-setting](https://user-images.githubusercontent.com/20632507/147073695-02faf079-66b3-4af8-98e4-5c907a68190f.png)
 
 To enable Google login for both the version released on the Google Play Console and the version directly distributed by the developer with the same certificate, you must register both the upload key certificate and the app signing certificate fingerprint.
+
