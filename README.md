@@ -1,10 +1,12 @@
 ## Build Setting
 
-> ###### Move the Plugins Folder from `Assets/UniversalSDK/Plugins` to `Assets/Plugins`.
+Move the Plugins Folder from `Assets/UniversalSDK/Plugins` to `Assets/Plugins`.
 
 ![](https://github.com/jameschun7/universal-sdk-unity-demo/blob/main/img/plugins-move.png?raw=true)
 
-> ###### baseProjectTemplate.gradle :
+### Android
+
+> baseProjectTemplate.gradle :
 
 ```groovy
 allprojects {
