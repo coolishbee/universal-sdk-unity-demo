@@ -6,7 +6,7 @@ Move the Plugins Folder from `Assets/UniversalSDK/Plugins` to `Assets/Plugins`.
 
 ### Android
 
-> baseProjectTemplate.gradle :
+baseProjectTemplate.gradle :
 
 ```groovy
 allprojects {
@@ -27,7 +27,10 @@ allprojects {
 ## Screenshots
 
 <img src="img/login-view.jpg" alt="App screenshot - login view" width="270" /> <img src="img/google-login.jpg" alt="App screenshot - google login" width="270" /> <img src="img/facebook-login.jpg" alt="App screenshot - facebook login" width="270" />
-<img src="img/main-view.jpg" alt="App screenshot - main view" width="270" /> <img src="img/inapp-purchase.jpg" alt="App screenshot - inapp purchase" width="270" />
+
+<img src="img/main-view.jpg" alt="App screenshot - main view" width="270" /> <img src="img/inapp-purchase.jpg" alt="App screenshot - inapp purchase" width="270" /> <img src="img/chrome-custom-tabs.gif" alt="App screenshot - inapp purchase" width="270" />
+
+<img src="img/IMG_0007.PNG" alt="App screenshot - ios google" width="270" /> <img src="img/IMG_0008.PNG" alt="App screenshot - inapp purchase" width="270" /> <img src="img/safari-view-controller.gif" alt="App screenshot - view" width="270" />
 
 ## Google InApp Billing TEST
 
