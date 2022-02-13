@@ -17,7 +17,6 @@ allprojects {
         dependencies {            
             classpath 'com.android.tools.build:gradle:4.0.1'
             classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.11"
-            classpath 'com.google.gms:google-services:4.3.0'
             **BUILD_SCRIPT_DEPS**
         }
     }
