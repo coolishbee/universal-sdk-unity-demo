@@ -8,8 +8,14 @@ namespace Universal.UniversalSDK
         public const string settingsAssetName = "UniversalSDKSettings";
         public const string settingsPath = "UniversalSDK/Resources";
         public const string settingsAssetExtension = ".asset";
+        public const string sdkVersion = "1.2.1";        
 
         private static UniversalSDKSettings instance;
+
+        public static void SetInstance(UniversalSDKSettings settings)
+        {
+            instance = settings;
+        }
 
         public static UniversalSDKSettings Instance
         {
@@ -26,9 +32,9 @@ namespace Universal.UniversalSDK
                 return instance;
             }
         }
-        
-        //[SerializeField]
-        //private bool devBuild = true;
+
+        [SerializeField]
+        private bool devBuild = true;
 
         [SerializeField]
         private bool iOSAppleLogin = false;
@@ -42,13 +48,13 @@ namespace Universal.UniversalSDK
         [SerializeField]
         private string iOSGoogleClientID = "";
         [SerializeField]
-        private string iOSReversedClientID = "";        
+        private string iOSReversedClientID = "";
 
-        //public static bool DevBuild
-        //{
-        //    get { return Instance.devBuild; }
-        //    set { Instance.devBuild = value; }
-        //}
+        public static bool DevBuild
+        {
+            get { return Instance.devBuild; }
+            set { Instance.devBuild = value; }
+        }
 
         public static bool UseAppleLogin
         {

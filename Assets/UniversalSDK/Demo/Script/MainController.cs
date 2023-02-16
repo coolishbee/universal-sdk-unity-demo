@@ -1,21 +1,11 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 using Universal.UniversalSDK;
 
 public class MainController : MonoBehaviour
 {
-#if UNITY_ANDROID
-    string productID_1 = "boxer_unity1000";
-    string productID_2 = "boxer_unity2000";
-#elif UNITY_IOS    
-    string productID_1 = "com.unity.inapp1200";
-    string productID_2 = "com.unity.inapp2500";
-#endif
-
     public Image userImage;
     public Text displayNameText;
     public Text uniqueIdText;    
@@ -27,61 +17,63 @@ public class MainController : MonoBehaviour
 
     void Start()
     {
-        LoginResult result = UserInfoManager.Instance.loginResult;
-        StartCoroutine(UpdateProfile(result.UserProfile));
-        UpdateRawSection(result);
+    }
 
-
-#if UNITY_ANDROID
-        var scopes = new string[] { "boxer_unity1000", "boxer_unity2000" };
-#elif UNITY_IOS
-        var scopes = new string[] { "com.unity.inapp1200", "com.unity.inapp2500" };        
-#endif
-        UniversalSDK.Ins.InitBilling(scopes, res =>
-        {
-            res.Match(
-                value =>
-                {
-                },
-                error =>
-                {
-                });
-        });
-    }    
+    public void OnClickGoogleLogin()
+    {
+        UniversalSDK.Ins.Login(LoginType.GOOGLE,
+            result =>
+            {
+                result.Match(
+                    value =>
+                    {
+                        StartCoroutine(UpdateProfile(value));
+                        UpdateRawSection(value);
+                    },
+                    error =>
+                    {
+                        UpdateRawSection(error);
+                    });
+            });
+    }
+    public void OnClickFacebookLogin()
+    {
+        UniversalSDK.Ins.Login(LoginType.FACEBOOK,
+            result =>
+            {
+                result.Match(
+                    value =>
+                    {
+                        StartCoroutine(UpdateProfile(value));
+                        UpdateRawSection(value);
+                    },
+                    error =>
+                    {
+                        UpdateRawSection(error);
+                    });
+            });
+    }
+    public void OnClickAppleLogin()
+    {
+        UniversalSDK.Ins.Login(LoginType.APPLE,
+            result =>
+            {
+                result.Match(
+                    value =>
+                    {
+                        StartCoroutine(UpdateProfile(value));
+                        UpdateRawSection(value);
+                    },
+                    error =>
+                    {
+                        UpdateRawSection(error);
+                    });
+            });
+    }
 
     public void OnClickLogout()
     {
         UniversalSDK.Ins.Logout(result =>
-        {
-            result.Match(
-                value =>
-                {
-                    SceneManager.LoadSceneAsync("Login");
-                },
-                error =>
-                {
-                    UpdateRawSection(error);
-                });
-        });
-    }
-    public void OnClickInPurchase1200()
-    {
-        UniversalSDK.Ins.InAppPurchase(productID_1, result =>
-        {
-            result.Match(
-                value =>
-                {
-                    UpdateRawSection(value);
-                },
-                error =>
-                {
-                    UpdateRawSection(error);
-                });
-        });
-    }
-    public void OnClickInPurchase2500()
-    {
-        UniversalSDK.Ins.InAppPurchase(productID_2, result =>
         {
             result.Match(
                 value =>
@@ -129,11 +121,11 @@ public class MainController : MonoBehaviour
         scrollContentTransform.localPosition = Vector3.zero;
     }
 
-    IEnumerator UpdateProfile(UserProfile profile)
+    IEnumerator UpdateProfile(LoginResult result)
     {
-        if (profile.PhotoURL != null)
+        if (result.ImageURL != null)
         {
-            var www = UnityWebRequestTexture.GetTexture(profile.PhotoURL);
+            var www = UnityWebRequestTexture.GetTexture(result.ImageURL);
             yield return www.SendWebRequest();
             if (www.result == UnityWebRequest.Result.ConnectionError ||
                 www.result == UnityWebRequest.Result.ProtocolError)
@@ -154,8 +146,8 @@ public class MainController : MonoBehaviour
         {
             yield return null;
         }        
-        displayNameText.text = profile.DisplayName;
-        uniqueIdText.text = profile.UserID;
-        emailText.text = profile.Email;
+        displayNameText.text = result.Name;
+        uniqueIdText.text = result.UserID;
+        emailText.text = result.Email;
     }
 }

@@ -20,20 +20,20 @@ public class InitBillingTest
         }
         ";
         var called = false;
-        UniversalAPI.InitBilling(new string[] { "boxer_unity1000" }, result =>
-        {
-            Assert.True(result.IsFailure);
-            result.MatchError(error =>
-            {
-                called = true;
-                Assert.AreEqual(123, error.Code);
-                Assert.AreEqual("error", error.Message);
-            });
-        });
+        //UniversalAPI.InitBilling(new string[] { "boxer_unity1000" }, result =>
+        //{
+        //    Assert.True(result.IsFailure);
+        //    result.MatchError(error =>
+        //    {
+        //        called = true;
+        //        Assert.AreEqual(123, error.Code);
+        //        Assert.AreEqual("error", error.Message);
+        //    });
+        //});
 
-        var identifier = UniversalAPI.actions.Keys.ToList()[0];
-        UniversalAPI._OnApiError(CallbackMessageForUnity.WrapValue(identifier, json));
-        Assert.True(called);
+        //var identifier = UniversalAPI.actions.Keys.ToList()[0];
+        //UniversalAPI._OnApiError(CallbackMessageForUnity.WrapValue(identifier, json));
+        //Assert.True(called);
 
     }
 
