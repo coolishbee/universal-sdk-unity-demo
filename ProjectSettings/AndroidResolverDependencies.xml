@@ -1,8 +1,8 @@
 <dependencies>
   <packages>
     <package>com.google.code.gson:gson:2.8.5</package>
-    <package>io.github.jameschun7:universalsdk:[1.2.1]</package>
-    <package>org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.11</package>
+    <package>io.github.coolishbee:universalsdk:3.0.2</package>
+    <package>org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.61</package>
   </packages>
   <files />
   <settings>
