@@ -25,17 +25,9 @@ allprojects {
 
 ## Screenshots
 
-<img src="img/login-view.jpg" alt="App screenshot - login view" width="270" /> <img src="img/google-login.jpg" alt="App screenshot - google login" width="270" /> <img src="img/facebook-login.jpg" alt="App screenshot - facebook login" width="270" />
+<img src="img/google-login.jpg" alt="App screenshot - google login" width="270" /> <img src="img/facebook-login.jpg" alt="App screenshot - facebook login" width="270" /> <img src="img/main-view.jpg" alt="App screenshot - main view" width="270" />
 
-<img src="img/main-view.jpg" alt="App screenshot - main view" width="270" /> <img src="img/inapp-purchase.jpg" alt="App screenshot - inapp purchase" width="270" /> <img src="img/chrome-custom-tabs.gif" alt="App screenshot - inapp purchase" width="270" />
-
-<img src="img/IMG_0007.PNG" alt="App screenshot - ios google" width="270" /> <img src="img/IMG_0008.PNG" alt="App screenshot - inapp purchase" width="270" /> <img src="img/safari-view-controller.gif" alt="App screenshot - view" width="270" />
-
-## Google InApp Billing TEST
-
-If the message `This item cannot be requested` appears during the in-app purchase test, you must install the tester version released as a test track through the test participation method.
-
-Because the apk built and distributed directly by the developer is not signed through the Google Play Console, test payment may not be smooth.
+<img src="img/chrome-custom-tabs.gif" alt="App screenshot - inapp purchase" width="270" /> <img src="img/IMG_0007.PNG" alt="App screenshot - ios google" width="270" /> <img src="img/safari-view-controller.gif" alt="App screenshot - view" width="270" />
 
 ## Google Login Certificate Thumbprint Settings
 
