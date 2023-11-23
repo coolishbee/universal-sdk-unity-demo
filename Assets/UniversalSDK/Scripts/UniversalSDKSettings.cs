@@ -6,9 +6,9 @@ namespace Universal.UniversalSDK
     public class UniversalSDKSettings : ScriptableObject
     {
         public const string settingsAssetName = "UniversalSDKSettings";
-        public const string settingsPath = "Editor/UniversalSDK";
+        public const string settingsPath = "Editor/UniversalSDK/Resources";
         public const string settingsAssetExtension = ".asset";
-        public const string sdkVersion = "1.2.6";
+        public const string sdkVersion = "1.2.8";
 
         private static UniversalSDKSettings instance;
 

@@ -23,7 +23,7 @@ dependencies {
     
 // Android Resolver Dependencies Start
     implementation 'com.google.code.gson:gson:2.8.5' // Assets/UniversalSDK/Editor/UniversalSDKDependencies.xml:8
-    implementation 'io.github.coolishbee:universalsdk:3.0.7' // Assets/UniversalSDK/Editor/UniversalSDKDependencies.xml:4
+    implementation 'io.github.coolishbee:universalsdk:3.0.8' // Assets/UniversalSDK/Editor/UniversalSDKDependencies.xml:4
 // Android Resolver Dependencies End
 **DEPS**}
 
