@@ -1,27 +1,3 @@
-## Build Setting
-
-Move the Plugins Folder from `Assets/UniversalSDK/Plugins` to `Assets/Plugins`.
-
-![](https://github.com/jameschun7/universal-sdk-unity-demo/blob/main/img/plugins-move.png?raw=true)
-
-### Android
-
-baseProjectTemplate.gradle :
-
-```groovy
-allprojects {
-    buildscript {
-        ...
-        }
-
-        dependencies {            
-            classpath 'com.android.tools.build:gradle:4.0.1'
-            classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.11"
-            **BUILD_SCRIPT_DEPS**
-        }
-    }
-}
-```
 
 ## Screenshots
 
