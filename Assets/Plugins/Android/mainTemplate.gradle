@@ -5,9 +5,6 @@
         maven {
             url "https://maven.google.com"
         }
-        maven {
-            url "https://s01.oss.sonatype.org/content/repositories/releases" // Assets/UniversalSDK/Editor/UniversalSDKDependencies.xml:7
-        }
         mavenLocal()
         jcenter()
         mavenCentral()
@@ -22,14 +19,15 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     
 // Android Resolver Dependencies Start
-    implementation 'com.google.code.gson:gson:2.8.5' // Assets/UniversalSDK/Editor/UniversalSDKDependencies.xml:8
-    implementation 'io.github.coolishbee:universalsdk:3.0.8' // Assets/UniversalSDK/Editor/UniversalSDKDependencies.xml:4
+    implementation 'com.github.coolishbee:universal-sdk-android:3.0.9' // Assets/UniversalSDK/Editor/UniversalSDKDependencies.xml:4
+    implementation 'com.google.code.gson:gson:2.8.9' // Assets/UniversalSDK/Editor/UniversalSDKDependencies.xml:9
 // Android Resolver Dependencies End
 **DEPS**}
 
 // Android Resolver Exclusions Start
 android {
   packagingOptions {
+      exclude ('/lib/arm64-v8a/*' + '*')
       exclude ('/lib/armeabi/*' + '*')
       exclude ('/lib/mips/*' + '*')
       exclude ('/lib/mips64/*' + '*')

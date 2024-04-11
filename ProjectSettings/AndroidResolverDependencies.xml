@@ -1,11 +1,11 @@
 <dependencies>
   <packages>
-    <package>com.google.code.gson:gson:2.8.5</package>
-    <package>io.github.coolishbee:universalsdk:3.0.8</package>
+    <package>com.github.coolishbee:universal-sdk-android:3.0.9</package>
+    <package>com.google.code.gson:gson:2.8.9</package>
   </packages>
   <files />
   <settings>
-    <setting name="androidAbis" value="arm64-v8a,armeabi-v7a" />
+    <setting name="androidAbis" value="armeabi-v7a" />
     <setting name="bundleId" value="com.universal.android.sample" />
     <setting name="explodeAars" value="True" />
     <setting name="gradleBuildEnabled" value="True" />
